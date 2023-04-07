@@ -2,12 +2,13 @@ package de.bcxp.challenge.country;
 
 import de.bcxp.challenge.reader.CsvDataReader;
 import de.bcxp.challenge.country.Country;
-
+import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
 import java.util.ArrayList;
 import java.util.List;
 
 public class CountryStorage {
-
+    private static final Logger logger = LogManager.getLogger(CountryStorage.class);
     String filePath;
 
     public CountryStorage(String filePath){
@@ -55,7 +56,7 @@ public class CountryStorage {
         }
 
         if(countDots > 1 && countCommas > 1){
-
+            logger.error("Invalid number with too many separators");
         }
 
         // Separator is a dot, commas separate hundreds
