@@ -1,4 +1,9 @@
 package de.bcxp.challenge;
+import de.bcxp.challenge.reader.CsvDataReader;
+import de.bcxp.challenge.weather.*;
+
+import java.util.Arrays;
+import java.util.List;
 
 /**
  * The entry class for your solution. This class is only aimed as starting point and not intended as baseline for your software
@@ -13,9 +18,11 @@ public final class App {
     public static void main(String... args) {
 
         // Your preparation code …
+        WeatherStorage weatherStorage = new WeatherStorage("C:\\Users\\santiago\\IdeaProjects\\programming-challenge\\src\\main\\resources\\de\\bcxp\\challenge\\weather.csv");
+        WeatherService weatherService = new WeatherService(weatherStorage);
+        WeatherDay dayWithSmallestTempSpread = weatherService.getDayWithSmallestTempSpread();
 
-        String dayWithSmallestTempSpread = "Someday";     // Your day analysis function call …
-        System.out.printf("Day with smallest temperature spread: %s%n", dayWithSmallestTempSpread);
+        System.out.printf("Day with smallest temperature spread: %s%n", dayWithSmallestTempSpread.getOrdinalNumber());
 
         String countryWithHighestPopulationDensity = "Some country"; // Your population density analysis function call …
         System.out.printf("Country with highest population density: %s%n", countryWithHighestPopulationDensity);
