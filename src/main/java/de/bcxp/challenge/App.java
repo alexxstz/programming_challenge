@@ -1,6 +1,7 @@
 package de.bcxp.challenge;
 import de.bcxp.challenge.reader.CsvDataReader;
 import de.bcxp.challenge.weather.*;
+import de.bcxp.challenge.country.*;
 
 import java.util.Arrays;
 import java.util.List;
@@ -24,7 +25,9 @@ public final class App {
 
         System.out.printf("Day with smallest temperature spread: %s%n", dayWithSmallestTempSpread.getOrdinalNumber());
 
-        String countryWithHighestPopulationDensity = "Some country"; // Your population density analysis function call …
-        System.out.printf("Country with highest population density: %s%n", countryWithHighestPopulationDensity);
+        CountryStorage countryStorage = new CountryStorage("C:\\Users\\santiago\\IdeaProjects\\programming-challenge\\src\\main\\resources\\de\\bcxp\\challenge\\countries.csv");
+        CountryService countryService = new CountryService(countryStorage);
+        Country countryWithHighestPopulationDensity = countryService.getCountryWithHighestDensity(); // Your population density analysis function call …
+        System.out.printf("Country with highest population density: %s%n", countryWithHighestPopulationDensity.getName());
     }
 }
