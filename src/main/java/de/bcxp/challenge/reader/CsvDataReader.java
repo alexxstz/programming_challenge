@@ -14,34 +14,32 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.List;
 
-public class CsvDataReader implements DataReader<String[]>{
+public class CsvDataReader implements DataReader<String[]> {
     private static final Logger logger = LogManager.getLogger(CsvDataReader.class);
     // Default delimiter for csv file is a comma
     private char delimiter = ',';
-    private int withSkipLines=1;
+    private int withSkipLines = 1;
 
 
     // Constructor for setting custom delimiter
-    public CsvDataReader(char delimiter, int withSkipLines){
+    public CsvDataReader(char delimiter, int withSkipLines) {
 
         this.delimiter = delimiter;
         this.withSkipLines = withSkipLines;
     }
 
 
-
-    public CsvDataReader(){
+    public CsvDataReader() {
 
     }
 
 
-
     @Override
-    public List<String[]> readData(String filePath){
+    public List<String[]> readData(String filePath) {
 
         List<String[]> allData = null;
 
-        try{
+        try {
             File file = new File(filePath);
             if (!file.exists()) {
                 logger.error("File not found: " + filePath);

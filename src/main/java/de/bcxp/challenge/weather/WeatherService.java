@@ -10,8 +10,6 @@ public class WeatherService {
     }
 
     /**
-     *
-     * @param
      * @return WeatherDay with smallest temperature spread. If two or more days have the same spread, it returns the last WeatherDay in the csv file.
      */
     public WeatherDay getDayWithSmallestTempSpread() {
@@ -21,11 +19,11 @@ public class WeatherService {
         int minSpread = weatherDayList.get(0).getTemperatureDifference();
         int minSpreadOrdinalNumber = 1;
 
-        for (int i = 1; i < weatherDayList.size(); i++){
+        for (int i = 1; i < weatherDayList.size(); i++) {
             WeatherDay currentDay = weatherDayList.get(i);
             int currSpread = currentDay.getTemperatureDifference();
 
-            if (currSpread <= minSpread){
+            if (currSpread <= minSpread) {
                 minSpreadOrdinalNumber = currentDay.getOrdinalNumber();
                 minSpread = currentDay.getTemperatureDifference();
             }
@@ -33,7 +31,7 @@ public class WeatherService {
         }
 
         // Ordinal number starts at 1, the List starts counting at 0. So we have to substract 1 from ordinal number to get the right list element.
-        return weatherDayList.get(minSpreadOrdinalNumber-1);
+        return weatherDayList.get(minSpreadOrdinalNumber - 1);
     }
 }
 

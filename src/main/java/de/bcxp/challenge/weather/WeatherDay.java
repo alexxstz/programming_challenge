@@ -10,7 +10,7 @@ public class WeatherDay {
 
     private int maxTemperature;
 
-    public WeatherDay(int ordinalNumber, int minTemperature, int maxTemperature){
+    public WeatherDay(int ordinalNumber, int minTemperature, int maxTemperature) {
         this.ordinalNumber = ordinalNumber;
         this.minTemperature = minTemperature;
         this.maxTemperature = maxTemperature;
@@ -28,7 +28,7 @@ public class WeatherDay {
         return minTemperature;
     }
 
-    public int getTemperatureDifference(){
+    public int getTemperatureDifference() {
         return Math.abs(maxTemperature - minTemperature);
     }
 

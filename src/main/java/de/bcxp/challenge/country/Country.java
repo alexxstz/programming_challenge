@@ -7,14 +7,14 @@ public class Country {
     private double population;
     private double area;
 
-    public Country(String name, double population, double area){
+    public Country(String name, double population, double area) {
         this.name = name;
         this.population = population;
         this.area = area;
     }
 
     // Getter
-    public String getName(){
+    public String getName() {
         return name;
     }
 
