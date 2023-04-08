@@ -18,6 +18,7 @@ public class CsvDataReader implements DataReader<String[]>{
     private static final Logger logger = LogManager.getLogger(CsvDataReader.class);
     // Default delimiter for csv file is a comma
     private char delimiter = ',';
+    private int withSkipLines=1;
     /**
      *
      * @param filePath path of the input csv file
@@ -25,9 +26,13 @@ public class CsvDataReader implements DataReader<String[]>{
      */
 
     // Constructor for setting custom delimiter
-    public CsvDataReader(char delimiter){
+    public CsvDataReader(char delimiter, int withSkipLines){
+
         this.delimiter = delimiter;
+        this.withSkipLines = withSkipLines;
     }
+
+
 
     public CsvDataReader(){
 
@@ -56,7 +61,7 @@ public class CsvDataReader implements DataReader<String[]>{
                     .build();
 
             CSVReader csvReader = new CSVReaderBuilder(filereader)
-                    .withSkipLines(1)
+                    .withSkipLines(withSkipLines)
                     .withCSVParser(csvParser)
                     .build();
 

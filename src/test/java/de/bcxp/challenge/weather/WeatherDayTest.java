@@ -1,7 +1,6 @@
 package de.bcxp.challenge.weather;
 
-import de.bcxp.challenge.weather.WeatherDay;
-import org.junit.jupiter.api.BeforeEach;
+
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;

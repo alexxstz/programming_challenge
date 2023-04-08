@@ -31,4 +31,23 @@ public class WeatherDay {
     public int getTemperatureDifference(){
         return Math.abs(maxTemperature - minTemperature);
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        WeatherDay that = (WeatherDay) o;
+        return ordinalNumber == that.ordinalNumber &&
+                minTemperature == that.minTemperature &&
+                maxTemperature == that.maxTemperature;
+    }
+
+    @Override
+    public int hashCode() {
+        int result = ordinalNumber;
+        result = 31 * result + minTemperature;
+        result = 31 * result + maxTemperature;
+        return result;
+    }
+
 }

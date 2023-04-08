@@ -1,5 +1,7 @@
 package de.bcxp.challenge.country;
 
+import java.util.Objects;
+
 public class Country {
     private String name;
     private double population;
@@ -40,4 +42,25 @@ public class Country {
     public void setArea(double area) {
         this.area = area;
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) {
+            return true;
+        }
+        if (!(o instanceof Country)) {
+            return false;
+        }
+        Country country = (Country) o;
+        return Double.compare(country.population, population) == 0
+                && Double.compare(country.area, area) == 0
+                && Objects.equals(name, country.name);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(name, population, area);
+    }
+
+
 }

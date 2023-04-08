@@ -29,6 +29,6 @@ public class WeatherStorage {
         int minTemperature = Integer.parseInt(string[2]);
         int maxTemperature = Integer.parseInt(string[1]);
 
-        return new WeatherDay(ordinalNumber,maxTemperature,minTemperature);
+        return new WeatherDay(ordinalNumber,minTemperature,maxTemperature);
     }
 }

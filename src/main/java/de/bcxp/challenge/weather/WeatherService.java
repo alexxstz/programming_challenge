@@ -32,7 +32,7 @@ public class WeatherService {
 
         }
 
-
+        // Ordinal number starts at 1, the List starts counting at 0. So we have to substract 1 from ordinal number to get the right list element.
         return weatherDayList.get(minSpreadOrdinalNumber-1);
     }
 }
