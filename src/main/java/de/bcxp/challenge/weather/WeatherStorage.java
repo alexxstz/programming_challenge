@@ -17,7 +17,7 @@ public class WeatherStorage {
     }
 
     public List<WeatherDay> getWeatherDaysFromFile() {
-        CsvDataReader csvReader = new CsvDataReader();
+        CsvDataReader csvReader = new CsvDataReader(',', 1);
         List<String[]> stringsFromFile = csvReader.readData(filePath);
         List<WeatherDay> weatherDaysList = new ArrayList<>();
 

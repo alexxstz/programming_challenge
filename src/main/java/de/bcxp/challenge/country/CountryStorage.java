@@ -22,7 +22,7 @@ public class CountryStorage {
     }
 
     public List<Country> getCountriesDaysFromFile() {
-        CsvDataReader csvReader = new CsvDataReader(';', 0);
+        CsvDataReader csvReader = new CsvDataReader(';', 1);
         List<String[]> stringsFromFile = csvReader.readData(filePath);
         List<Country> countriesList = new ArrayList<>();
 

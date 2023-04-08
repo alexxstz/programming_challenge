@@ -19,13 +19,13 @@ public final class App {
     public static void main(String... args) {
 
         // Your preparation code …
-        WeatherStorage weatherStorage = new WeatherStorage("C:\\Users\\santiago\\IdeaProjects\\programming-challenge\\src\\main\\resources\\de\\bcxp\\challenge\\weather.csv");
+        WeatherStorage weatherStorage = new WeatherStorage("src/main/resources/de/bcxp/challenge/weather.csv");
         WeatherService weatherService = new WeatherService(weatherStorage);
         WeatherDay dayWithSmallestTempSpread = weatherService.getDayWithSmallestTempSpread();
 
         System.out.printf("Day with smallest temperature spread: %s%n", dayWithSmallestTempSpread.getOrdinalNumber());
 
-        CountryStorage countryStorage = new CountryStorage("C:\\Users\\santiago\\IdeaProjects\\programming-challenge\\src\\main\\resources\\de\\bcxp\\challenge\\countries.csv");
+        CountryStorage countryStorage = new CountryStorage("src/main/resources/de/bcxp/challenge/countries.csv");
         CountryService countryService = new CountryService(countryStorage);
         Country countryWithHighestPopulationDensity = countryService.getCountryWithHighestDensity(); // Your population density analysis function call …
         System.out.printf("Country with highest population density: %s%n", countryWithHighestPopulationDensity.getName());
