@@ -11,7 +11,7 @@ public class WeatherService {
 
     /**
      *
-     * @param filePath of weather csv file
+     * @param
      * @return WeatherDay with smallest temperature spread. If two or more days have the same spread, it returns the last WeatherDay in the csv file.
      */
     public WeatherDay getDayWithSmallestTempSpread() {

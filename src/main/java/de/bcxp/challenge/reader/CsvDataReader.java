@@ -19,11 +19,7 @@ public class CsvDataReader implements DataReader<String[]>{
     // Default delimiter for csv file is a comma
     private char delimiter = ',';
     private int withSkipLines=1;
-    /**
-     *
-     * @param filePath path of the input csv file
-     * @return a list of string with data from csv
-     */
+
 
     // Constructor for setting custom delimiter
     public CsvDataReader(char delimiter, int withSkipLines){
@@ -37,6 +33,9 @@ public class CsvDataReader implements DataReader<String[]>{
     public CsvDataReader(){
 
     }
+
+
+
     @Override
     public List<String[]> readData(String filePath){
 
