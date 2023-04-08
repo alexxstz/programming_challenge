@@ -5,6 +5,10 @@ import de.bcxp.challenge.weather.WeatherDay;
 
 import java.util.List;
 
+/**
+ * Service class for Country. Takes a countryStorage object and returns the country with the highest densitiy from the countryStorage.
+ */
+
 public class CountryService {
 
     CountryStorage countryStorage;

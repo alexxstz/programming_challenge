@@ -14,6 +14,9 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.List;
 
+/**
+ * CSV Data Reader. Accepts custom separator and can skip lines.
+ */
 public class CsvDataReader implements DataReader<String[]> {
     private static final Logger logger = LogManager.getLogger(CsvDataReader.class);
     // Default delimiter for csv file is a comma

@@ -8,9 +8,14 @@ import org.apache.logging.log4j.LogManager;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * CountryStorage class. Reads a csv file and maps to a Country.
+ */
 public class CountryStorage {
     private static final Logger logger = LogManager.getLogger(CountryStorage.class);
     String filePath;
+
+
 
     public CountryStorage(String filePath) {
         this.filePath = filePath;

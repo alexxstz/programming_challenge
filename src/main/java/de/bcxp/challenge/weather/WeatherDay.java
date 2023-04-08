@@ -1,7 +1,7 @@
 package de.bcxp.challenge.weather;
 
 /**
- * Weather Day Class
+ * Weather Day Class. Contains ordinalNumber(day of the month), min Temperature and max. Temperature
  */
 public class WeatherDay {
     private int ordinalNumber;

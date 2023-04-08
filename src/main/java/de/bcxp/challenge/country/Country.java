@@ -2,6 +2,9 @@ package de.bcxp.challenge.country;
 
 import java.util.Objects;
 
+/**
+ * Class for a Country. Contains name, population and area. Can calculate the densitiy.
+ */
 public class Country {
     private String name;
     private double population;

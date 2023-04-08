@@ -5,6 +5,9 @@ import de.bcxp.challenge.reader.CsvDataReader;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Storage class for Weather Objects. Uses CsvDataReader to read from a csv file and map them to Weather Objects
+ */
 public class WeatherStorage {
 
     String filePath;

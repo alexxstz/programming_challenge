@@ -2,6 +2,9 @@ package de.bcxp.challenge.weather;
 
 import java.util.List;
 
+/**
+ * Service class for Weather.
+ */
 public class WeatherService {
     WeatherStorage weatherStorage;
 
